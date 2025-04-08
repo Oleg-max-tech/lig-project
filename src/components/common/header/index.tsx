@@ -1,7 +1,17 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
+import classNames from "classnames";
+import Image from "next/image";
+
+const navItems = [
+  { label: "Home", href: "#" },
+  { label: "About us", href: "#" },
+  { label: "Services", href: "#" },
+  { label: "Gallery", href: "#" },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,23 +23,27 @@ export default function Header() {
       <div className="max-w-[1920px] mx-auto px-4 py-4 flex items-center justify-between">
         {/* Логотип */}
         <div className="flex items-center gap-2 pl-8 lg:pl-16">
-          <img src="/logo.png" alt="Logo" className="h-10" />
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </div>
 
         {/* Навігація (прихована на малих екранах) */}
         <nav className="hidden md:flex gap-8 text-white text-sm md:text-lg lg:text-xl font-Montserrat w-full justify-center">
-          <a href="#" className="w-1/10 hover:text-red-500 transition">
-            Home
-          </a>
-          <a href="#" className="w-1/10 hover:text-red-500 transition">
-            About us
-          </a>
-          <a href="#" className="w-1/10 hover:text-red-500 transition">
-            Services
-          </a>
-          <a href="#" className="w-1/10 hover:text-red-500 transition">
-            Gallery
-          </a>
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="w-1/10 hover:text-red-500 transition"
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
 
         {/* Іконки (приховані на малих екранах) */}
@@ -43,7 +57,10 @@ export default function Header() {
         </div>
 
         {/* Бургер-меню для мобільних */}
-        <div className="md:hidden flex items-center" onClick={toggleMenu}>
+        <div
+          className="md:hidden flex items-center cursor-pointer"
+          onClick={toggleMenu}
+        >
           {isMenuOpen ? (
             <FaTimes className="text-white h-6 w-6" />
           ) : (
@@ -59,37 +76,26 @@ export default function Header() {
         } md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-[#1a1a1a]`}
       >
         <nav className="flex flex-col gap-6 items-center py-4 w-full">
-          <a
-            href="#"
-            className="text-white text-lg md:text-sm lg:text-lg py-2 hover:text-red-500 transition"
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="text-white text-lg md:text-sm lg:text-base py-2 hover:text-red-500 transition"
-          >
-            About us
-          </a>
-          <a
-            href="#"
-            className="text-white text-lg md:text-sm lg:text-base py-2 hover:text-red-500 transition"
-          >
-            Services
-          </a>
-          <a
-            href="#"
-            className="text-white text- md:text-sm lg:text-base py-2 hover:text-red-500 transition"
-          >
-            Gallery
-          </a>
+          {navItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="text-white text-lg md:text-sm lg:text-base py-2 hover:text-red-500 transition"
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Іконки внизу */}
         <div
-          className={`${
-            isMenuOpen ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-500 ease-in-out flex justify-center gap-6 pb-4`}
+          className={classNames(
+            {
+              "opacity-100": isMenuOpen,
+              "opacity-0": !isMenuOpen,
+            },
+            "transition-opacity duration-500 ease-in-out flex justify-center gap-6 pb-4"
+          )}
         >
           <button className="bg-white rounded-lg p-2">
             <FaPhoneAlt className="h-8 w-8 text-black" />

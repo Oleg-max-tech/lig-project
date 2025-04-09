@@ -4,8 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "red",
+        dark: "#1a1a1a",
       },
+      maxWidth: { 480: "1920px" },
+      maxHeight: { 125: "500px" },
     },
   },
   plugins: [],

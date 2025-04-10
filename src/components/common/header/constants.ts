@@ -1,21 +1,22 @@
-export const headerMenuItems = [
+export const BURGER_ICON = "text-white h-6 w-6";
+export const HEADER_MENU_ITEMS = [
   {
-    id: 0,
+    id: 1,
     label: "Home",
     path: "/",
   },
   {
-    id: 1,
+    id: 2,
     label: "About us",
     path: "/",
   },
   {
-    id: 2,
+    id: 3,
     label: "Services",
     path: "/",
   },
   {
-    id: 3,
+    id: 4,
     label: "Gallery",
     path: "/",
   },

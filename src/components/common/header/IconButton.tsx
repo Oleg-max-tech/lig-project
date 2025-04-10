@@ -6,7 +6,7 @@ type IconButtonProps = {
   iconClassName?: string;
 };
 
-const IconButton = ({
+export const IconButton = ({
   icon: Icon,
   buttonClassName = "",
   iconClassName = "",
@@ -31,5 +31,3 @@ const IconButton = ({
     </button>
   );
 };
-
-export default IconButton;

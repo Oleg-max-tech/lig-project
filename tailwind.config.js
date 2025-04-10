@@ -6,8 +6,16 @@ export default {
       colors: {
         dark: "#1a1a1a",
       },
-      maxWidth: { 480: "1920px" },
-      maxHeight: { 125: "500px" },
+      spacing: {
+        480: "1920px", // для ширини і висоти
+        125: "500px", // для висоти та інших відступів
+      },
+      maxWidth: {
+        480: "1920px", // для ширини
+      },
+      maxHeight: {
+        125: "500px", // для висоти
+      },
     },
   },
   plugins: [],

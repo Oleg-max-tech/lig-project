@@ -1,51 +1,45 @@
 "use client";
+
 import { useState } from "react";
+import cn from "classnames";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
-import { FaBars, FaTimes } from "react-icons/fa";
-import HeaderNav from "./navMenu";
-import { BURGER_ICON } from "./styles";
-import IconButton from "./IconButton";
-import { buttonClassName, iconClassName } from "./styles";
-import classNames from "classnames";
-import Logo from "./icons";
+
+import { Logo } from "./icons";
+import { Menu } from "./Menu";
+import { IconButton } from "./IconButton";
+import { BurgerToggle } from "./BurgerToggle";
+import { CUSTOM_CONTAINER } from "@/styles";
+
+const ICON_CLASS_NAME = "h-8 w-8 text-black";
+const BUTTON_CLASS_NAME = "bg-white rounded-lg p-2";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
     <header className="bg-dark">
-      <div className="max-w-480 mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Логотип */}
+      <div className={CUSTOM_CONTAINER}>
         <Logo />
-        <HeaderNav className="hidden md:flex gap-20 text-white text-sm md:text-lg lg:text-xl font-Montserrat w-full justify-center" />
+        <Menu />
         <div className="hidden md:flex gap-3 pr-8 lg:pr-16">
           <IconButton
             icon={FaPhoneAlt}
-            buttonClassName={buttonClassName}
-            iconClassName={iconClassName}
+            buttonClassName={BUTTON_CLASS_NAME}
+            iconClassName={ICON_CLASS_NAME}
           />
           <IconButton
             icon={FaCommentDots}
-            buttonClassName={buttonClassName}
-            iconClassName={iconClassName}
+            buttonClassName={BUTTON_CLASS_NAME}
+            iconClassName={ICON_CLASS_NAME}
           />
         </div>
-
-        {/* Бургер-меню для мобільних */}
-        <div className="md:hidden flex items-center" onClick={toggleMenu}>
-          {isMenuOpen ? (
-            <FaTimes className={BURGER_ICON} />
-          ) : (
-            <FaBars className={BURGER_ICON} />
-          )}
-        </div>
+        <BurgerToggle isOpen={isMenuOpen} onToggle={toggleMenu} />
       </div>
 
-      {/* Випадаюче меню для мобільних */}
       <div
-        className={classNames(
+        className={cn(
           "md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-dark",
           {
             "max-h-125 opacity-100": isMenuOpen,
@@ -53,11 +47,9 @@ export const Header = () => {
           }
         )}
       >
-        <HeaderNav className="flex flex-col gap-6 items-center py-4 w-full text-white text-lg md:text-sm lg:text-lg" />
-
-        {/* Іконки внизу */}
+        <Menu isMobile />
         <div
-          className={classNames(
+          className={cn(
             "transition-opacity duration-500 ease-in-out flex justify-center gap-6 pb-4",
             {
               "opacity-100": isMenuOpen,
@@ -67,13 +59,13 @@ export const Header = () => {
         >
           <IconButton
             icon={FaPhoneAlt}
-            buttonClassName={buttonClassName}
-            iconClassName={iconClassName}
+            buttonClassName={BUTTON_CLASS_NAME}
+            iconClassName={ICON_CLASS_NAME}
           />
           <IconButton
             icon={FaCommentDots}
-            buttonClassName={buttonClassName}
-            iconClassName={iconClassName}
+            buttonClassName={BUTTON_CLASS_NAME}
+            iconClassName={ICON_CLASS_NAME}
           />
         </div>
       </div>

@@ -4,8 +4,8 @@ import Footer from "@/components/common/Footer";
 export default function Home() {
   return (
     <>
-      <Header />
-      {/* <Footer /> ; */}
+      {/* <Header /> */}
+      <Footer /> ;
     </>
   );
 }

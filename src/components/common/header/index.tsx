@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+
 import cn from "classnames";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
 import { Logo } from "./icons";
 import { Menu } from "./Menu";
-import { IconButton } from "./IconButton";
+import { IconButton } from "../../IconButton/IconButton";
 import { BurgerToggle } from "./BurgerToggle";
 import { CUSTOM_CONTAINER } from "@/styles";
 
@@ -21,6 +22,7 @@ export const Header = () => {
   return (
     <header className="bg-dark">
       <div className={CUSTOM_CONTAINER}>
+        {/* Логотип */}
         <Logo />
         <Menu />
         <div className="hidden md:flex gap-3 pr-8 lg:pr-16">
@@ -48,6 +50,7 @@ export const Header = () => {
         )}
       >
         <Menu isMobile />
+
         <div
           className={cn(
             "transition-opacity duration-500 ease-in-out flex justify-center gap-6 pb-4",

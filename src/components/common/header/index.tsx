@@ -9,7 +9,7 @@ import { Logo } from "./icons";
 import { Menu } from "./Menu";
 import { IconButton } from "../../IconButton/IconButton";
 import { BurgerToggle } from "./BurgerToggle";
-import { CUSTOM_CONTAINER } from "@/styles";
+import "@/styles/style.css";
 
 const ICON_CLASS_NAME = "h-8 w-8 text-black";
 const BUTTON_CLASS_NAME = "bg-white rounded-lg p-2";
@@ -21,8 +21,7 @@ export const Header = () => {
 
   return (
     <header className="bg-dark">
-      <div className={CUSTOM_CONTAINER}>
-        {/* Логотип */}
+      <div className="header-container">
         <Logo />
         <Menu />
         <div className="hidden md:flex gap-3 pr-8 lg:pr-16">

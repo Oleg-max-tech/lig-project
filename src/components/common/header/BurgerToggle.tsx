@@ -1,19 +1,22 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import React from "react";
-import { BURGER_ICON } from "./constants";
+import { DEFAULT_BURGER_ICON } from "./constants";
 
-interface BurgerToggleProps {
+interface Props {
   isOpen: boolean;
   onToggle: () => void;
 }
 
-export const BurgerToggle = ({ isOpen, onToggle }: BurgerToggleProps) => {
+export const BurgerToggle = ({ isOpen, onToggle }: Props) => {
   return (
-    <div className="md:hidden flex items-center" onClick={onToggle}>
+    <div
+      className="md:hidden flex items-center cursor-pointer"
+      onClick={onToggle}
+    >
       {isOpen ? (
-        <FaTimes className={BURGER_ICON} />
+        <FaTimes className={DEFAULT_BURGER_ICON} />
       ) : (
-        <FaBars className={BURGER_ICON} />
+        <FaBars className={DEFAULT_BURGER_ICON} />
       )}
     </div>
   );

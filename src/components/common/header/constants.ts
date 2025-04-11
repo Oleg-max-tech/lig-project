@@ -1,4 +1,4 @@
-export const BURGER_ICON = "text-white h-6 w-6";
+export const DEFAULT_BURGER_ICON = "text-white h-6 w-6";
 export const HEADER_MENU_ITEMS = [
   {
     id: 1,

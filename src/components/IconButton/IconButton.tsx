@@ -21,7 +21,6 @@ export const IconButton = ({
         hover:bg-red-500
       `}
     >
-      {/* Іконка */}
       <Icon
         className={`
           text-black group-hover:text-white

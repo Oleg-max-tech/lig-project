@@ -36,3 +36,4 @@ const ContactInfo = () => {
 };
 
 export default ContactInfo;
+//contacts

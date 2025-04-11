@@ -21,3 +21,4 @@ export const FOOTER_MENU_ITEMS = [
     path: "/gallery",
   },
 ];
+//constats

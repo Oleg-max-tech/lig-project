@@ -7,7 +7,7 @@ import Menu from "./Menu";
 import { IconButton } from "../../IconButton/IconButton";
 import ContactInfo from "./ContactInfo";
 import "@/styles/style.css";
-
+//index
 const ICON_CLASS_NAME = "bg-[#e6dcd8] p-3 rounded-md";
 const BUTTON_CLASS_NAME = "text-black w-6 h-6";
 
@@ -36,3 +36,4 @@ export default function Footer() {
     </footer>
   );
 }
+//index

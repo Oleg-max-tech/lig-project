@@ -1,12 +1,12 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import React from "react";
-import { DEFAULT_BURGER_ICON } from "./constants";
 
 interface Props {
   isOpen: boolean;
   onToggle: () => void;
 }
 
+const DEFAULT_BURGER_ICON = "text-white h-6 w-6";
 export const BurgerToggle = ({ isOpen, onToggle }: Props) => {
   return (
     <div

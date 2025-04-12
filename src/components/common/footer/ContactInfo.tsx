@@ -1,19 +1,19 @@
 import Image from "next/image";
-import Phone from "@/assets/Icons/Phone.svg";
-import Email from "@/assets/Icons/Email.svg";
+import phone from "@/assets/Icons/phone.svg";
+import email from "@/assets/Icons/email.svg";
 import Link from "next/link";
 
 const CONTACT_INFO = [
   {
     id: 1,
-    src: Phone,
+    src: phone,
     alt: "Phone",
     href: "tel:8144245702",
     text: "814-424-5702",
   },
   {
     id: 2,
-    src: Email,
+    src: email,
     alt: "Email",
     href: "mailto:andrey@ilgconstruction.com",
     text: "andrey@ilgconstruction.com",

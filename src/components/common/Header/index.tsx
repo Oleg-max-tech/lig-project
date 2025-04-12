@@ -5,10 +5,9 @@ import { useState } from "react";
 import cn from "classnames";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
-import Logo from "./Icons/Logo";
+import Logo from "@/assets/Icons/Logo";
 import { Menu } from "./Menu";
 import { IconButton } from "@/components/IconButton/IconButton";
-
 import { BurgerIcon } from "./BurgerToggle";
 
 const ICON_CLASS_NAME = "h-8 w-8 text-black";

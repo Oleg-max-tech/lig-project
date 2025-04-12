@@ -5,38 +5,34 @@ import { useState } from "react";
 import cn from "classnames";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
-import { Logo } from "./icons";
+import Logo from "./Icons/Logo";
 import { Menu } from "./Menu";
-import { IconButton } from "../../IconButton/IconButton";
-import { BurgerToggle } from "./BurgerToggle";
-import "@/styles/style.css";
+import { IconButton } from "@/components/IconButton/IconButton";
+
+import { BurgerIcon } from "./BurgerToggle";
 
 const ICON_CLASS_NAME = "h-8 w-8 text-black";
 const BUTTON_CLASS_NAME = "bg-white rounded-lg p-2";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
     <header className="bg-dark">
-      <div className="header-container">
+      <div className="max-w-480 w-full mx-auto px-4 py-4 flex items-center justify-between">
         <Logo />
         <Menu />
         <div className="hidden md:flex gap-3 pr-8 lg:pr-16">
-          <IconButton
-            icon={FaPhoneAlt}
-            buttonClassName={BUTTON_CLASS_NAME}
-            iconClassName={ICON_CLASS_NAME}
-          />
-          <IconButton
-            icon={FaCommentDots}
-            buttonClassName={BUTTON_CLASS_NAME}
-            iconClassName={ICON_CLASS_NAME}
-          />
+          <IconButton buttonClassName={BUTTON_CLASS_NAME}>
+            <FaPhoneAlt className={ICON_CLASS_NAME} />
+          </IconButton>
+
+          <IconButton buttonClassName={BUTTON_CLASS_NAME}>
+            <FaCommentDots className={ICON_CLASS_NAME} />
+          </IconButton>
         </div>
-        <BurgerToggle isOpen={isMenuOpen} onToggle={toggleMenu} />
+        <BurgerIcon isOpen={isMenuOpen} toggleOpen={toggleMenu} />
       </div>
 
       <div
@@ -59,16 +55,13 @@ export const Header = () => {
             }
           )}
         >
-          <IconButton
-            icon={FaPhoneAlt}
-            buttonClassName={BUTTON_CLASS_NAME}
-            iconClassName={ICON_CLASS_NAME}
-          />
-          <IconButton
-            icon={FaCommentDots}
-            buttonClassName={BUTTON_CLASS_NAME}
-            iconClassName={ICON_CLASS_NAME}
-          />
+          <IconButton buttonClassName={BUTTON_CLASS_NAME}>
+            <FaPhoneAlt className={ICON_CLASS_NAME} />
+          </IconButton>
+
+          <IconButton buttonClassName={BUTTON_CLASS_NAME}>
+            <FaCommentDots className={ICON_CLASS_NAME} />
+          </IconButton>
         </div>
       </div>
     </header>

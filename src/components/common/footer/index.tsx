@@ -2,7 +2,7 @@
 import React from "react";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
-import { Logo } from "../Header/icons";
+import { Logo } from "../Header/Icons/Logo";
 import Menu from "./Menu";
 import { IconButton } from "../../IconButton/IconButton";
 import ContactInfo from "./ContactInfo";

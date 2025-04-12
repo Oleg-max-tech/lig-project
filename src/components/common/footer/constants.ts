@@ -1,4 +1,6 @@
-// constants.ts або інший файл
+import phone from "@/assets/icons/phone.svg";
+import email from "@/assets/icons/email.svg";
+
 export const FOOTER_MENU_ITEMS = [
   {
     id: 1,
@@ -22,3 +24,19 @@ export const FOOTER_MENU_ITEMS = [
   },
 ];
 //constats
+export const CONTACT_INFO_ITEMS = [
+  {
+    id: 1,
+    icon: phone,
+    alt: "Phone",
+    href: "tel:8144245702",
+    text: "814-424-5702",
+  },
+  {
+    id: 2,
+    icon: email,
+    alt: "Email",
+    href: "mailto:andrey@ilgconstruction.com",
+    text: "andrey@ilgconstruction.com",
+  },
+];

@@ -5,7 +5,7 @@ import { useState } from "react";
 import cn from "classnames";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
-import { Logo } from "./icons";
+import { Logo } from "../Icons/Logo";
 import { Menu } from "./Menu";
 import { IconButton } from "../../IconButton/IconButton";
 import { BurgerToggle } from "./BurgerToggle";

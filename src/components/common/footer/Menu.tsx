@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FOOTER_MENU_ITEMS } from "./constants";
 
-const Menu = () => {
+export const Menu = () => {
   return (
     <nav className="flex flex-wrap gap-20 justify-center md:justify-start">
       <div className="flex flex-col gap-5">
@@ -29,6 +29,3 @@ const Menu = () => {
     </nav>
   );
 };
-
-export default Menu;
-//menu

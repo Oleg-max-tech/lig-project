@@ -23,19 +23,19 @@ export const FOOTER_MENU_ITEMS = [
     path: "/gallery",
   },
 ];
-//constats
+
 export const CONTACT_INFO_ITEMS = [
   {
     id: 1,
     icon: phone,
-    alt: "Phone",
+    alt: "phone",
     href: "tel:8144245702",
     text: "814-424-5702",
   },
   {
     id: 2,
     icon: email,
-    alt: "Email",
+    alt: "email",
     href: "mailto:andrey@ilgconstruction.com",
     text: "andrey@ilgconstruction.com",
   },

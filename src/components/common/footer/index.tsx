@@ -2,14 +2,12 @@
 import React from "react";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
-import { Logo } from "../Icons/Logo";
+import { Logo } from "@/assets/Icons/Logo";
 import { Menu } from "./Menu";
 import { IconButton } from "@/components/IconButton/IconButton";
 import { ContactIcon } from "./ContactIcon";
 
-import "@/styles/style.css";
-
-const BUTTON_CLASS_NAME = "bg-[#e6dcd8] p-3 rounded-md";
+const BUTTON_CLASS_NAME = "bg-beige p-3 rounded-md";
 const ICON_CLASS_NAME = "text-black w-6 h-6";
 
 export const Footer = () => (

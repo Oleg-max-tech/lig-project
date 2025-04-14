@@ -5,7 +5,7 @@ import { useState } from "react";
 import cn from "classnames";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
-import { Logo } from "../Icons/Logo";
+import { Logo } from "../../../assets/Icons/Logo";
 import { Menu } from "./Menu";
 import { IconButton } from "../../IconButton/IconButton";
 import { BurgerToggle } from "./BurgerToggle";
@@ -21,7 +21,7 @@ export const Header = () => {
 
   return (
     <header className="bg-dark">
-      <div className="header-container">
+      <div className="max-w-480 w-full mx-auto px-4 py-4 flex items-center justify-between">
         <Logo />
         <Menu />
         <div className="hidden md:flex gap-3 pr-8 lg:pr-16">

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import cn from "classnames";
+
 import { HEADER_MENU_ITEMS } from "./constants";
 
 interface Props {
@@ -8,11 +10,12 @@ interface Props {
 export const Menu = ({ isMobile = false }: Props) => {
   return (
     <nav
-      className={
-        isMobile
-          ? "flex flex-col gap-6 items-center py-4 w-full text-white text-lg md:text-sm lg:text-lg"
-          : "hidden md:flex gap-20 text-white text-sm md:text-lg lg:text-xl font-Montserrat w-full justify-center"
-      }
+      className={cn("w-full text-white", {
+        "flex flex-col gap-6 items-center py-4 text-lg md:text-sm lg:text-lg":
+          isMobile,
+        "hidden md:flex gap-20 text-sm md:text-lg lg:text-xl font-Montserrat justify-center":
+          !isMobile,
+      })}
     >
       {HEADER_MENU_ITEMS.map(({ id, label, path }) => (
         <Link

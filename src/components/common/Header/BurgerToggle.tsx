@@ -6,8 +6,6 @@ interface Props {
   toggleOpen: VoidFunction;
 }
 
-const DEFAULT_BURGER_ICON = "text-white h-6 w-6";
-
 export const BurgerIcon = ({ isOpen, toggleOpen }: Props) => {
   const Icon = isOpen ? FaTimes : FaBars;
 
@@ -16,7 +14,7 @@ export const BurgerIcon = ({ isOpen, toggleOpen }: Props) => {
       className="md:hidden flex items-center cursor-pointer"
       onClick={toggleOpen}
     >
-      <Icon className={DEFAULT_BURGER_ICON} />
+      <Icon className="text-white h-6 w-6" />
     </div>
   );
 };

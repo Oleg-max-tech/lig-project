@@ -1,24 +1,21 @@
-// components/AboutCard.tsx
-import { ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
 
 interface AboutCardProps {
-  icon: ReactNode;
+  iconSrc: StaticImageData;
+  iconAlt: string;
   title: string;
   description: string;
 }
 
-export const AboutCard = ({ icon, title, description }: AboutCardProps) => (
-  <div className="space-y-3 pl-4">
-    <div className="text-2xl text-white">{icon}</div>
-
-    <div className="inline-block">
-      <h4 className="text-2xl font-semibold text-white">{title}</h4>
-      <div
-        className="h-0.5 bg-gradient-to-r from-white to-gray-600 rounded-full mt-1"
-        style={{ width: "calc(100% + 10px)" }}
-      />
-    </div>
-
-    <p className="text-sm text-gray-300">{description}</p>
+export const AboutCard = ({
+  iconSrc,
+  iconAlt,
+  title,
+  description,
+}: AboutCardProps) => (
+  <div className="flex flex-col items-start gap-4">
+    <Image src={iconSrc} width={40} height={40} alt={iconAlt} />
+    <h3 className="text-xl font-semibold">{title}</h3>
+    <p className="text-sm text-gray-400">{description}</p>
   </div>
 );

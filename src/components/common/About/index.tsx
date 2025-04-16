@@ -1,5 +1,7 @@
-import { Image1 } from "@/assets/About";
 import { AboutCardsGrid } from "./AboutCardsGrid";
+import Link from "next/link";
+import Image from "next/image";
+import main from "../../../assets/main.svg";
 
 export const AboutSection = () => {
   return (
@@ -31,17 +33,19 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          <div className="block lg:hidden">
-            <div className="w-full mt-10">
-              <Image1 />
-            </div>
+          <div className="lg:hidden mt-10 w-full flex justify-center">
+            <Link href="/" passHref>
+              <Image src={main} alt="Logo" className="w-full h-auto" />
+            </Link>
           </div>
 
           <AboutCardsGrid />
         </div>
 
         <div className="hidden lg:flex lg:col-span-2 justify-center items-center mt-10 lg:mt-0">
-          <Image1 />
+          <Link href="/" passHref>
+            <Image src={main} alt="Logo" className="w-full h-auto" />
+          </Link>
         </div>
       </div>
     </section>

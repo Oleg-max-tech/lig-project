@@ -1,11 +1,12 @@
 "use client";
+
 import React from "react";
 import { FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
 import { Logo } from "@/assets/Icons/Logo";
 import { Menu } from "./Menu";
 import { IconButton } from "@/components/IconButton/IconButton";
-import { ContactIcon } from "./ContactIcon";
+import ContactIcon from "./ContactIcon";
 
 const BUTTON_CLASS_NAME = "bg-beige p-3 rounded-md";
 const ICON_CLASS_NAME = "text-black w-6 h-6";

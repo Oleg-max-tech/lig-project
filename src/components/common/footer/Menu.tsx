@@ -1,14 +1,11 @@
 import Link from "next/link";
-import { FOOTER_MENU_ITEMS } from "./constants";
-
-const firstColumnItems = FOOTER_MENU_ITEMS.slice(0, 2);
-const secondColumnItems = FOOTER_MENU_ITEMS.slice(2);
+import { FOOTER_FIRST_COLUMN, FOOTER_SECOND_COLUMN } from "./constants";
 
 export const Menu = () => {
   return (
     <nav className="flex flex-wrap gap-20 justify-center md:justify-start">
       <div className="flex flex-col gap-5">
-        {firstColumnItems.map(({ id, label, path }) => (
+        {FOOTER_FIRST_COLUMN.map(({ id, label, path }) => (
           <Link
             key={id}
             href={path}
@@ -19,7 +16,7 @@ export const Menu = () => {
         ))}
       </div>
       <div className="flex flex-col gap-5 ml-20">
-        {secondColumnItems.map(({ id, label, path }) => (
+        {FOOTER_SECOND_COLUMN.map(({ id, label, path }) => (
           <Link
             key={id}
             href={path}

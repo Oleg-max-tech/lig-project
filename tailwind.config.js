@@ -11,12 +11,6 @@ export default {
         480: "1920px",
         125: "500px",
       },
-      maxWidth: {
-        480: "1920px",
-      },
-      maxHeight: {
-        125: "500px",
-      },
     },
   },
   plugins: [],

@@ -1,13 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
 import Image from "next/image";
 import { serviceData } from "./services";
 import { useActiveService } from "./useActiveService";
 
 export const ServiceSection: React.FC = () => {
   const { activeSlug, activeService, handleSelect, contentRef } =
-    useActiveService(); // Використовуємо activeSlug
+    useActiveService();
 
   return (
     <div className="px-4 py-6 max-w-7xl mx-auto font-montserrat">

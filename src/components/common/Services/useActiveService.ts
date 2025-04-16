@@ -1,7 +1,5 @@
-// hooks/useActiveService.ts
-
 import { useRef, useState } from "react";
-import { serviceData } from "./services"; // Заміни на відповідний шлях до файлу з даними
+import { serviceData } from "./services";
 
 export const useActiveService = () => {
   const [activeSlug, setActiveSlug] = useState("nichiha");

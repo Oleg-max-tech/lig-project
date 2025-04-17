@@ -1,8 +1,10 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
+import classNames from "classnames";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -31,24 +33,53 @@ const images = [
   image10,
 ];
 
-const buttonClassPrev =
-  "swiper-button-prev absolute  top-1/2 z-10 text-white bg-white/10 hover:bg-white/30 w-10 h-10 rounded-full flex items-center justify-center transform -translate-y-1/2";
-const buttonClassNext =
-  "swiper-button-next absolute  top-1/2 z-10 text-white bg-white/10 hover:bg-white/30 w-10 h-10 rounded-full flex items-center justify-center transform -translate-y-1/2";
+const arrowBase =
+  "z-20 text-white bg-white/10 hover:bg-white/30 w-10 h-10 rounded-full flex items-center justify-center";
+const buttonClassPrev = classNames(
+  arrowBase,
+  "absolute left-[-40px] top-1/2 -translate-y-1/2"
+);
+const buttonClassNext = classNames(
+  arrowBase,
+  "absolute right-[-40px] top-1/2 -translate-y-1/2"
+);
 
 export const GallerySlider = () => {
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    // Це потрібно, щоб Swiper побачив кнопки
+  }, []);
+
   return (
     <div className="relative bg-black py-12 px-4 max-w-300 mx-auto">
       <h1 className="text-white text-4xl font-extrabold mb-2 text-left pl-2">
         GALLERY
       </h1>
 
+      <button ref={prevRef} className={buttonClassPrev}>
+        ←
+      </button>
+      <button ref={nextRef} className={buttonClassNext}>
+        →
+      </button>
+
       <Swiper
         modules={[Navigation]}
         loop={true}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          prevEl: prevRef.current!,
+          nextEl: nextRef.current!,
+        }}
+        onBeforeInit={(swiper) => {
+          if (
+            typeof swiper.params.navigation !== "boolean" &&
+            swiper.params.navigation !== undefined
+          ) {
+            swiper.params.navigation.prevEl = prevRef.current!;
+            swiper.params.navigation.nextEl = nextRef.current!;
+          }
         }}
         spaceBetween={20}
         slidesPerView={3.5}
@@ -66,9 +97,6 @@ export const GallerySlider = () => {
             </div>
           </SwiperSlide>
         ))}
-
-        <button className={buttonClassPrev}>←</button>
-        <button className={buttonClassNext}>→</button>
       </Swiper>
     </div>
   );

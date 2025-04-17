@@ -1,12 +1,9 @@
-import Image from "next/image";
-import Header from "./components/common/header";
-import Footer from "./components/common/footer";
+import { FirstPage } from "./components/common/FirstPage";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <Footer /> ;
+      <FirstPage />
     </>
   );
 }

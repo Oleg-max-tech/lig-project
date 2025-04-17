@@ -8,6 +8,8 @@ export default {
       },
       spacing: {
         300: "1200",
+        74: "300px",
+        50: "200px",
       },
     },
   },

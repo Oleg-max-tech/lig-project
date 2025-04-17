@@ -3,43 +3,21 @@
 import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import Image from "next/image";
-import classNames from "classnames";
+import { ImageSlide } from "./ImageSlide";
+import cn from "classnames";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
-import image1 from "@/assets/image1.svg";
-import image2 from "@/assets/image2.svg";
-import image3 from "@/assets/image3.svg";
-import image4 from "@/assets/image4.svg";
-import image5 from "@/assets/image5.svg";
-import image6 from "@/assets/image6.svg";
-import image7 from "@/assets/image7.svg";
-import image8 from "@/assets/image8.svg";
-import image9 from "@/assets/image9.svg";
-import image10 from "@/assets/image10.svg";
-
-const images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10,
-];
+import { images } from "./constants";
 
 const arrowBase =
   "z-20 text-white bg-white/10 hover:bg-white/30 w-10 h-10 rounded-full flex items-center justify-center";
-const buttonClassPrev = classNames(
+const buttonClassPrev = cn(
   arrowBase,
   "absolute left-[-40px] top-1/2 -translate-y-1/2"
 );
-const buttonClassNext = classNames(
+const buttonClassNext = cn(
   arrowBase,
   "absolute right-[-40px] top-1/2 -translate-y-1/2"
 );
@@ -87,14 +65,7 @@ export const GallerySlider = () => {
       >
         {images.map((src, index) => (
           <SwiperSlide key={`${index}-${src.src}`}>
-            <div className="w-[300px] h-[200px] relative rounded-lg overflow-hidden">
-              <Image
-                src={src}
-                alt={`Image ${index}`}
-                fill
-                className="object-cover"
-              />
-            </div>
+            <ImageSlide src={src} index={index} />
           </SwiperSlide>
         ))}
       </Swiper>

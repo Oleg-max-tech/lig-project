@@ -2,14 +2,13 @@
 
 import Image from "next/image";
 import image from "@/assets/image.svg";
+
 import classNames from "classnames";
 
 export const FirstPage = () => {
   return (
     <div className="mt-20 relative w-full h-200 sm:h-screenTablet xs:h-screenMobile">
       <Image src={image} alt="etttb" fill className="object-cover" priority />
-
-      {/* Лівий текст */}
       <div
         className={classNames(
           "absolute left-4 top-1/2 sm:top-1/2 xs:top-[15%] -translate-y-1/2 sm:-translate-y-1/2 xs:-translate-y-[25%] max-w-[90%] flex flex-col gap-2"
@@ -43,7 +42,6 @@ export const FirstPage = () => {
         </h2>
       </div>
 
-      {/* Правий нижній текст */}
       <div
         className={classNames(
           "absolute bottom-0 right-0 bg-black/90 text-white p-4 sm:p-6 w-full sm:w-infoBox rounded-tl-xl",

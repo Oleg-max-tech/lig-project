@@ -18,7 +18,7 @@ export const Header = () => {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <header className="bg-dark">
+    <header className="bg-greydark">
       <div className="max-w-480 w-full mx-auto px-4 py-4 flex items-center justify-between">
         <Logo />
         <Menu />
@@ -36,7 +36,7 @@ export const Header = () => {
 
       <div
         className={cn(
-          "md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-dark",
+          "md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-graydark",
           {
             "max-h-125 opacity-100": isMenuOpen,
             "max-h-0 opacity-0": !isMenuOpen,

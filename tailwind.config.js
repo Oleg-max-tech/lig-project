@@ -9,6 +9,7 @@ export default {
       },
       maxWidth: {
         266: "1063px",
+        100: "400px",
       },
     },
   },

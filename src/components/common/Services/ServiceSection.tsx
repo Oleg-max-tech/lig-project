@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+
 import { serviceData } from "./services";
 import { useActiveService } from "./useActiveService";
 
@@ -9,7 +10,7 @@ export const ServiceSection: React.FC = () => {
     useActiveService();
 
   return (
-    <div className="px-4 py-6 max-w-7xl mx-auto font-montserrat overflow-hidden">
+    <div className="px-4 py-6 max-w-7xl mx-auto font-montserrat">
       <div className="inline-block mb-6">
         <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-white to-gray-600 bg-clip-text mb-2 inline-block">
           {activeService.title}
@@ -17,9 +18,8 @@ export const ServiceSection: React.FC = () => {
         <div className="h-0.5 bg-gradient-to-r from-white to-gray-600 rounded-full mt-2" />
       </div>
 
-      <div className="flex flex-row gap-6 overflow-hidden">
-        {/* Sidebar */}
-        <nav className="w-1/3 md:w-1/5 space-y-3 shrink-0">
+      <div className="flex flex-col md:flex-row gap-6">
+        <nav className="w-full md:w-1/5 space-y-3">
           {serviceData.map((item) => {
             const isActive = activeSlug === item.slug;
             return (
@@ -38,24 +38,24 @@ export const ServiceSection: React.FC = () => {
           })}
         </nav>
 
-        {/* Main Content */}
         <div
+          className="flex flex-col md:flex-row gap-6 w-full"
           ref={contentRef}
-          className="flex flex-col md:flex-row gap-6 w-2/3 md:w-4/5 overflow-hidden min-w-0"
         >
-          {/* Image */}
-          <div className="w-full md:w-3/5 max-h-[400px] overflow-hidden rounded-lg">
-            <Image
-              src={activeService.image}
-              alt={activeService.title}
-              width={800}
-              height={600}
-              className="w-full h-full object-cover rounded-lg"
-            />
+          <div className="w-full md:w-3/5">
+            <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-full">
+              <Image
+                src={activeService.image}
+                alt={activeService.title}
+                fill
+                className="object-cover rounded-lg"
+                sizes="(max-width: 768px) 100vw, 60vw"
+              />
+            </div>
           </div>
 
-          {/* Text */}
-          <div className="text-white flex flex-col w-full md:w-2/5 justify-between overflow-auto">
+          {/* Текст */}
+          <div className="text-white flex flex-col w-full md:w-2/5">
             <div>
               <p className="text-sm leading-relaxed mb-6">
                 {activeService.description}
@@ -69,7 +69,7 @@ export const ServiceSection: React.FC = () => {
             </div>
 
             <div className="mt-6">
-              <button className="w-full px-6 py-2 text-lg font-semibold text-black bg-gray-300 border-2 border-gray-800 rounded-lg transition-colors hover:bg-red hover:text-white">
+              <button className="px-6 py-2 text-lg font-semibold text-black bg-gray-300 border-2 border-gray-800 rounded-lg transition-colors hover:bg-red hover:text-white">
                 Get Consultation
               </button>
             </div>

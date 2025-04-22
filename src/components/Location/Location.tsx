@@ -8,8 +8,8 @@ export const MapComponent = () => {
           "absolute text-black font-extrabold",
           "text-4xl sm:text-5xl lg:text-6xl",
           "left-4 lg:left-16 sm:left-8 translate-y-0",
-          "sm:top-1/2 sm:left-0 sm:bottom-auto sm:-translate-y-[30%]",
-          "lg:translate-y-[30%]"
+          "sm:top-1/2 sm:left-0 sm:bottom-auto sm:-translate-y-30",
+          "lg:translate-y-30"
         )}
       >
         LOCATION

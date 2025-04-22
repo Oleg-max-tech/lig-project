@@ -1,5 +1,5 @@
-import { serviceData } from "./services";
 import cn from "classnames";
+import { serviceData } from "./services";
 
 interface ServiceNavProps {
   activeSlug: string;

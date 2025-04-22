@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
+
 import { serviceData } from "./services";
 import { ServiceNav } from "./ServiceNav";
 
@@ -42,18 +43,18 @@ export const ServiceSection: React.FC = () => {
 
         <div className="flex flex-col md:flex-row gap-6 w-full">
           <div className="w-full md:w-3/5">
-            <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-full">
+            <div className="w-full aspect-[4/3] md:aspect-auto md:h-[400px] relative">
               <Image
                 src={activeService.image}
                 alt={activeService.title}
-                fill
-                className="object-cover rounded-lg"
-                sizes="(max-width: 768px) 100vw, 60vw"
+                className="object-cover rounded-lg w-full h-full"
+                width={800}
+                height={600}
               />
             </div>
           </div>
 
-          <div className="text-white flex flex-col w-full md:w-2/5">
+          <div className="text-white flex flex-col w-full md:w-2/5 h-full justify-between">
             <div>
               <p className="text-sm leading-relaxed mb-6">
                 {activeService.description}

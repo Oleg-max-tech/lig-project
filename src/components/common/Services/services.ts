@@ -1,7 +1,6 @@
 import acmPanelsImage from "@/assets/Images/Services/acm-Panels.svg";
 import architecturalImage from "@/assets/Images/Services/architectural.svg";
 import cempritPanelsImage from "@/assets/Images/Services/cemprit-Panels.svg";
-
 import jamesImage from "@/assets/Images/Services/james.svg";
 import nichinaPanelsImage from "@/assets/Images/Services/nichina-Panels.svg";
 import trespaPanelsImage from "@/assets/Images/Services/trespa-Panels.svg";

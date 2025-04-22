@@ -1,5 +1,5 @@
-import phoneIcon from "@/assets/phoneIcon.svg";
-import emailIcon from "@/assets/emailIcon.svg";
+import phoneIcon from "@/assets/phone-Icon.svg";
+import emailIcon from "@/assets/email-Icon.svg";
 
 export const FOOTER_MENU_ITEMS = [
   {

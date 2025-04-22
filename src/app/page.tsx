@@ -1,9 +1,9 @@
-import ServicesPage from "@/components/common/Services";
+import { ServiceSection } from "@/components/common/Services";
 
 export default function Home() {
   return (
     <>
-      <ServicesPage />
+      <ServiceSection />
     </>
   );
 }

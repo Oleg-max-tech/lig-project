@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: "#1a1a1a",
+        baseDark: "#1a1a1a",
         red: "#FF0000",
       },
       maxWidth: {
-        266: "1063px",
+        266: "1064px",
         100: "400px",
       },
     },

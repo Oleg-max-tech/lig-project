@@ -1,18 +1,19 @@
-import acmPanels from "@/assets/Services/acmPanels.svg";
-import architectural from "@/assets/Services/architectural.svg";
-import cempritPanels from "@/assets/Services/cempritPanels.svg";
-import james from "@/assets/Services/james.svg";
-import nichinaPanels from "@/assets/Services/nichinaPanels.svg";
-import trespaPanels from "@/assets/Services/trespaPanels.svg";
-import vinylSiding from "@/assets/Services/vinylSiding.svg";
-import woodSiding from "@/assets/Services/woodSiding.svg";
+import acmPanelsImage from "@/assets/Images/Services/acm-Panels.svg";
+import architecturalImage from "@/assets/Images/Services/architectural.svg";
+import cempritPanelsImage from "@/assets/Images/Services/cemprit-Panels.svg";
+
+import jamesImage from "@/assets/Images/Services/james.svg";
+import nichinaPanelsImage from "@/assets/Images/Services/nichina-Panels.svg";
+import trespaPanelsImage from "@/assets/Images/Services/trespa-Panels.svg";
+import vinylSidingImage from "@/assets/Images/Services/vinyl-Siding.svg";
+import woodSidingImage from "@/assets/Images/Services/wood-Siding.svg";
 
 export const serviceData = [
   {
     label: "Nichiha panels",
     slug: "nichiha",
     title: "Nichiha panels",
-    image: nichinaPanels,
+    image: nichinaPanelsImage,
     description:
       "Nichiha panels are fiber cement panels offering a versatile range of textures, including wood, stone, and metal-like finishes. These panels are widely used for commercial, residential, and institutional buildings due to their aesthetic flexibility and durability.",
     features: [
@@ -26,7 +27,7 @@ export const serviceData = [
     label: "Cembrit panels",
     slug: "cembrit",
     title: "Cembrit Panels",
-    image: cempritPanels,
+    image: cempritPanelsImage,
     description:
       "Cembrit panels are fiber cement panels offering high durability, low maintenance, and excellent fire resistance. They are available in a wide range of textures and colors.",
     features: [
@@ -40,7 +41,7 @@ export const serviceData = [
     label: "James Hardie siding",
     slug: "james-hardie",
     title: "James Hardie siding",
-    image: james,
+    image: jamesImage,
     description:
       "James Hardie siding is a trusted fiber cement solution known for its durability, resistance to fire, and wide range of styles.",
     features: [
@@ -54,7 +55,7 @@ export const serviceData = [
     label: "Trespa panels",
     slug: "trespa",
     title: "Trespa panels",
-    image: trespaPanels,
+    image: trespaPanelsImage,
     description:
       "Trespa panels are known for their high-pressure laminate (HPL) construction, providing outstanding strength and durability.",
     features: [
@@ -68,7 +69,7 @@ export const serviceData = [
     label: "ACM panels",
     slug: "acm",
     title: "ACM panels",
-    image: acmPanels,
+    image: acmPanelsImage,
     description:
       "ACM metal panels are lightweight but offer excellent rigidity and strength, ideal for sleek and modern facades.",
     features: [
@@ -82,7 +83,7 @@ export const serviceData = [
     label: "Architectural panels",
     slug: "architectural",
     title: "Architectural panels",
-    image: architectural,
+    image: architecturalImage,
     description:
       "Architectural panels offer a high degree of customization and are used to create unique facades with depth and texture.",
     features: [
@@ -96,7 +97,7 @@ export const serviceData = [
     label: "Vinyl siding",
     slug: "vinyl",
     title: "Vinyl siding",
-    image: vinylSiding,
+    image: vinylSidingImage,
     description:
       "Vinyl siding is a cost-effective and durable option, commonly used in residential construction.",
     features: [
@@ -110,7 +111,7 @@ export const serviceData = [
     label: "Wood siding",
     slug: "wood",
     title: "Wood siding",
-    image: woodSiding,
+    image: woodSidingImage,
     description:
       "Wood siding offers a natural and classic appeal, adding warmth and charm to any building.",
     features: [

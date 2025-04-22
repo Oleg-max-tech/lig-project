@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-type ImageSlideProps = {
+interface Props {
   src: string;
   index: number;
-};
+}
 
-export const ImageSlide = ({ src, index }: ImageSlideProps) => {
+export const ImageSlide = ({ src, index }: Props) => {
   return (
-    <div className="w-74 h-50 relative rounded-lg overflow-hidden">
+    <div className="w-full relative rounded-lg overflow-hidden aspect-[1/1]">
       <Image src={src} alt={`Image ${index}`} fill className="object-cover" />
     </div>
   );

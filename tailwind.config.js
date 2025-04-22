@@ -1,4 +1,3 @@
-// tailwind.config.js
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -7,8 +6,9 @@ export default {
         primary: "red",
       },
       spacing: {
-        300: "1200",
-        74: "300px",
+        300: "1200px",
+        75: "300px",
+        62.5: "250px",
         50: "200px",
       },
     },

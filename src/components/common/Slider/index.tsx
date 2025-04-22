@@ -1,4 +1,3 @@
-// src/components/GallerySlider.tsx
 "use client";
 
 import { useRef } from "react";
@@ -7,13 +6,13 @@ import cn from "classnames";
 
 const arrowBase =
   "z-20 text-white bg-white/10 hover:bg-white/30 w-10 h-10 rounded-full flex items-center justify-center";
-const buttonClassPrev = cn(
+const prevButtonClassNAme = cn(
   arrowBase,
-  "absolute left-[-40px] top-1/2 -translate-y-1/2"
+  "absolute left-0 top-1/2 -translate-y-1/2"
 );
-const buttonClassNext = cn(
+const nextButtonClassName = cn(
   arrowBase,
-  "absolute right-[-40px] top-1/2 -translate-y-1/2"
+  "absolute right-0 top-1/2 -translate-y-1/2"
 );
 
 export const GallerySlider = () => {
@@ -26,10 +25,10 @@ export const GallerySlider = () => {
         GALLERY
       </h1>
 
-      <button ref={prevRef} className={buttonClassPrev}>
+      <button ref={prevRef} className={prevButtonClassNAme}>
         ←
       </button>
-      <button ref={nextRef} className={buttonClassNext}>
+      <button ref={nextRef} className={nextButtonClassName}>
         →
       </button>
 

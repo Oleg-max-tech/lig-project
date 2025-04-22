@@ -1,26 +1,23 @@
 "use client";
 
-import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { ImageSlide } from "./ImageSlide";
-import { images } from "./constants";
-
 import "swiper/css";
 import "swiper/css/navigation";
 
-type Props = {
+import { ImageSlide } from "./ImageSlide";
+import { sliderImages } from "./constants";
+
+interface Props {
   prevRef: React.RefObject<HTMLButtonElement | null>;
   nextRef: React.RefObject<HTMLButtonElement | null>;
-};
+}
 
 export const Slider = ({ prevRef, nextRef }: Props) => {
-  useEffect(() => {}, []);
-
   return (
     <Swiper
       modules={[Navigation]}
-      loop={true}
+      loop
       navigation={{
         prevEl: prevRef.current!,
         nextEl: nextRef.current!,
@@ -35,11 +32,11 @@ export const Slider = ({ prevRef, nextRef }: Props) => {
         }
       }}
       spaceBetween={20}
-      slidesPerView={3.5}
+      slidesPerView="auto"
       className="px-8"
     >
-      {images.map((src, index) => (
-        <SwiperSlide key={`${index}-${src.src}`}>
+      {sliderImages.map((src, index) => (
+        <SwiperSlide key={`${index}-${src}`} className="max-w-75 sm:max-w-62.5">
           <ImageSlide src={src} index={index} />
         </SwiperSlide>
       ))}

@@ -6,6 +6,9 @@ export default {
       colors: {
         primary: "red",
       },
+      translate: {
+        30: "30%",
+      },
     },
   },
   plugins: [],

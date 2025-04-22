@@ -40,7 +40,7 @@ export const CONTACT_INFO_ITEMS = [
     text: "andrey@ilgconstruction.com",
   },
 ];
-export const CONTACT_ICON = [
+export const CONTACT_ICONS = [
   {
     id: 1,
     src: phoneIcon,
@@ -57,5 +57,13 @@ export const CONTACT_ICON = [
   },
 ];
 
-export const FOOTER_FIRST_COLUMN = FOOTER_MENU_ITEMS.slice(0, 2);
-export const FOOTER_SECOND_COLUMN = FOOTER_MENU_ITEMS.slice(2);
+export const FOOTER_COLUMNS = {
+  left: [
+    { id: 1, label: "Services", path: "/" },
+    { id: 2, label: "Gallery", path: "/about-us" },
+  ],
+  right: [
+    { id: 3, label: "Home", path: "/services" },
+    { id: 4, label: "About us", path: "/gallery" },
+  ],
+};

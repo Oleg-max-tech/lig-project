@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: "#1a1a1a",
+        baseDark: "#1a1a1a",
         beige: "#e6dcd8",
       },
       spacing: {

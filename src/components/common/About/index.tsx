@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import mainIcon from "@/assets/mainIcon.jpg";
+import homeImage from "@/assets/home-Image.jpg";
 import briefcase from "@/assets/briefcase.svg";
 import chart from "@/assets/chart.svg";
 import verify from "@/assets/verify.svg";
@@ -38,7 +38,7 @@ export const AboutSection = () => {
 
           <div className="lg:hidden mt-10 w-full flex justify-center">
             <Link href="/" passHref>
-              <Image src={mainIcon} alt="Logo" className="w-full h-100" />
+              <Image src={homeImage} alt="Logo" className="w-full h-100" />
             </Link>
           </div>
 
@@ -73,7 +73,7 @@ export const AboutSection = () => {
 
         <div className="hidden lg:flex lg:col-span-2 justify-center items-center mt-10 lg:mt-0">
           <Link href="/" passHref>
-            <Image src={mainIcon} alt="Logo" className="w-full h-100" />
+            <Image src={homeImage} alt="Logo" className="w-full h-100" />
           </Link>
         </div>
       </div>
